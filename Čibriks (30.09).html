@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <script>
+            let mainīgais;
+            let rezultāts
+            const konstantais="6"
+            mainīgais="Rūdža" 
+            rezultāts=mainīgais+konstantais
+            console.log (rezultāts)
+        
+        </script>    
+    </head>
+        <body id="ķermenis"> 
+            <p id="par1"> Tava māsa man selfiju prasa </p>
+            <script>    
+            console.log(document.getElementById("par1").innerHTML);
+            document.getElementById("par1").innerHTML = "pavisam kas cits";
+            document.getElementById("par1").innerHTML += rezultāts;
+
+            for(let skaitītājs=1;skaitītājs<=150; skaitītājs++){
+
+            let jaunais = document.createElement("p");
+            jaunais.id="par2";
+            jaunais.innerHTML="cits paragrāfs"+skaitītājs;
+            document.body.appendChild(jaunais);
+            }
+
+            </script> 
+        </body>
+</html>

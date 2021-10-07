@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css"/>
+     <h1 style="text-align: center; font-size: 35pt;">
+         Latvijas kultūrģeogrāfiskais mantojums
+     </h1>
+     <div id="overlay"></div>
+     <style>
+         *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcXASFT0s2groSxuGb0keHhSjw2Zvx5pbaaA&usqp=CAU) ;
+                background-size: cover;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background-repeat: no-repeat;
+                overflow: auto;
+            }
+     </style>
+    </head>
+    <body>
+
+        <style>
+            
+            .box{
+                width: 37%;
+                float: left;
+                margin: 20px 50px;
+                background-color: rgb(191, 219, 155);
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0,0,0,0,0.15);
+                border: 1px solid rgb(124, 121, 121);
+                
+
+            }
+            .img{
+                width: fit-content; 
+                border-radius: 8px;
+                margin-bottom: 10px;
+                width: 400px;
+                height: 200px;
+                position: fixed;
+            }
+            .box h1{
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            .box p{
+                font-size: 15px;
+                line-height: 28px;
+                height: 90px;
+                overflow: hidden;
+            }
+            .box a{
+                display: inline-block;
+                color: rgb(233, 20, 20);
+                background-color: rgb(169, 209, 241);
+                text-decoration: none;
+                padding: 10px 15px;
+                border-radius: 8px;
+                margin-top: 15px;
+            }
+            .box a:hover{
+                box-shadow: 0 5px 5px rgba(0,0,0,0,0.2);
+            }
+            .box.showContent p{
+                height: auto;
+            }
+            .box.showContent a.readmore-btn{
+                background-color: red;
+                color: rgb(255, 255, 255);
+            }
+            .modal{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 50%;
+                top: 50%;
+                transition: 200ms ease-in-out;
+                transform: translate(-50%, -50%) scale(0);
+                z-index: 10;
+                background-color: rgb(253, 249, 243);
+                width: 1000px;
+                max-width: 90%;
+                overflow: auto;
+            }
+            .modal.active{
+                transform: translate(-50%, -50%) scale(1);
+            }
+            .modal-header {
+                padding: 20px 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom:1px solid black;
+            }
+            .modal-header .title{
+                font-size: xx-large;
+                font-weight: bold;
+            }
+            .modal-header .close-button{
+                cursor: pointer;
+                border: none;
+                outline: none;
+                background: none;
+                font-size: 4.25rem;
+                color: red;
+                font-weight: bold;
+            }
+            .modal-body{
+                padding: 30px 35px;
+            }
+            #overlay{
+                position: fixed;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, .5);
+                pointer-events: none;
+                transition: 200ms ease-in-out;
+            }
+            #overlay.active {
+                pointer-events: all;
+                opacity: 1;
+            }
+            .modal1{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 50%;
+                top: 50%;
+                transition: 200ms ease-in-out;
+                transform: translate(-50%, -50%) scale(0);
+                z-index: 10;
+                background-color: rgb(253, 249, 243);
+                width: 1000px;
+                max-width: 90%;
+                overflow: auto;
+            }
+            .modal1.active{
+                transform: translate(-50%, -50%) scale(1);
+            }
+            .modal1-header {
+                padding: 20px 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom:1px solid black;
+            }
+            .modal1-header .title{
+                font-size: xx-large;
+                font-weight: bold;
+            }
+            .modal1-header .close-button{
+                cursor: pointer;
+                border: none;
+                outline: none;
+                background: none;
+                font-size: 4.25rem;
+                color: red;
+                font-weight: bold;
+            }
+            .modal1-body{
+                padding: 30px 35px;
+            }
+
+           
+
+        </style>
+            <div>
+                <button  data-modal-target="#modal" style="border-radius: 10px; padding: 10px 15px; font-size: x-large; margin-top: 30px;;  position: fixed;margin: left 5%">LATVIJĀ</button>
+            
+            </div>
+            <div>
+                <button class="btn" data-modal-target="#modal1" style="border-radius: 10px; padding: 10px 15px; font-size: x-large; margin-top: 30px;margin-left: 93%;">RĪGĀ</button>
+             
+                        
+            </div>
+
+
+            
+                <div class="modal" id="modal">
+                <div class="modal-header">
+                <div class="title">Objekti Latvijā</div>
+                <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body"><div class="box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Rundale_palace_-_Igors_Jefimovs_-_Panoramio.jpg" alt="" style="border-image-width: 40opx; height: 200px;">
+                    <h1>Rundales castle
+                    </h1>
+                    <p>In 1735 Duke of Courland Ernst Johann von Biron bought land in Rundāle with an old medieval castle in the territory of a planned summer residence. 
+                    The old castle was demolished and construction after the design of Bartolomeo Rastrelli started in 1736. 
+                    Construction proceeded slowly because part of the materials and resources were transferred to the construction of Jelgava Palace, a project which was more important for the duke. 
+                    Following Biron's fall from grace in 1740, the palace stood unfinished and empty until 1762 when Biron returned from his exile. Under the supervision of Rastrelli its construction was finished in 1768. 
+                    Johann Michael Graff produced lavish stucco decorations for the palace during this time. Ernst Johann von Biron loved the palace and moved there almost immediately in 1768. He often visited the palace and spent summers there until his death in 1772</p>
+                    <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                    </div>
+        
+                    <div class="box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Siguldas_jaun%C4%81_pils_-_panoramio_%281%29.jpg/1200px-Siguldas_jaun%C4%81_pils_-_panoramio_%281%29.jpg" alt="" style="border-image-width: 40opx; height: 200px;">
+                    <h1>Siguldas castle</h1>
+                    <p>The manor center began to develop in the fore-castle area of Sigulda Medieval Castle during the 17th century. 
+                        There are still a few remaining 18th and 19th century buildings built during the ownership of the Von Borghs and Kropotkins. 
+                        These are the Summer Castle, the New Castle, the White Castle, the vagar's (supervisor of serfs) house, the servants' house, a barn, a laundry house and a vegetable and fruit basement. 
+                        The manor center is enclosed by chipped boulder walls with a splendid gate structure. </p>
+                    <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                    </div>
+        
+                        <div class="box">
+                        <img src="http://visitkuldiga.com/wp-content/uploads/2018/08/edoles-pils-07.jpg" alt="" style="border-image-width: 40opx; height: 200px;">
+                        <h1>Edoles castle</h1>
+                        <p>The castle was built for the bishop of Courland between 1264 and 1267.
+                            It was rebuilt in the 16th century and from 1561 until 1920 it was the property of the Baltic-German Baron von Behr and his descendants.
+                            During the 18th century the castle was expanded and from 1835 to 1841 it underwent a major reconstruction work to become one of the first samples of Neo-Gothic architecture in Kurzeme.
+                            The building was partly burned during the Russian Revolution of 1905.
+                            Between 1906 and 1907 a household yard and tower were built in one of its corners, being the façade remodelled with its Gothic forms preserved.</p>
+                        <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                        </div>
+                </div>
+            </div>
+                            <div class="modal" id="modal1">
+                            <div class="modal-header">
+                            <div class="modal-title">Objekti Rīgā</div>
+                            <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-body"><div class="box">
+                                <img src="https://cdn.thecrazytourist.com/wp-content/uploads/2018/05/Vecr%C4%ABga.jpg" alt="" style="border-image-width: 40opx; height: 200px;">
+                                <h1>Old Riga
+                                </h1>
+                                <p>Vecrīga is the original area of Riga and consists of the historic city limits before the city was greatly expanded in the late 19th century. 
+                                    In the old days, Vecrīga was protected by a surrounding wall except the side adjacent to the Daugava river bank. 
+                                    When the wall was torn down, the waters from Daugava filled the space creating (Riga City Canal).</p>
+                                <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                                </div>
+                    
+                                <div class="box">
+                                <img src="https://lh3.googleusercontent.com/proxy/1iUwF1umntE6u8m5aZ92_8IOzPxTLCZmi2u2l_tLqr43ZukDE3r3ev2cajUYchVVK2WHZYAp0y6LqDTO6k0ePHoXKBpmROQ7hqtk2TtaUg1TPpMxoS9IgH2BD52l_HJ10Q" alt="" style="border-image-width: 40opx; height: 200px;">
+                                <h1>Latvian National Museum of Art </h1>
+                                <p>The Latvian National Museum of Art is the richest collection of national art in Latvia. 
+                                    It houses more than 52,000 works of art reflecting the development of professional art in the Baltic area and in Latvia from the middle of the 18th century until the present time.
+                                    The museum is located in building in Riga, which is historically significant. 
+                                    The building at 1, Janis Rozentāls sq. was designed by the German architect Wilhelm Neumann and built in 1905 — it is one of the most impressive historical buildings on the boulevard and is situated next to the Academy of Art. </p>
+                                <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                                </div>
+                    
+                                    <div class="box">
+                                    <img src="http://visitkuldiga.com/wp-content/uploads/2018/08/edoles-pils-07.jpg" alt="" style="border-image-width: 40opx; height: 200px;">
+                                    <h1>Riga Cathedral</h1>
+                                    <p>The church was built near the River Daugava in 1211 by Livonian Bishop Albert of Riga, who came from Lower Saxony in northwestern Germany. 
+                                        It is considered the largest medieval church in the Baltic states. 
+                                        It has undergone many modifications in the course of its history.
+                                        David Caspari was rector of the cathedral school in the late 17th century. 
+                                        His son Georg Caspari also served at the cathedral.</p>
+                                    <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                                    </div>
+                            </div>
+                            </div>
+                                
+        
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+                                <script>
+                                        $(".readmore-btn").on("click", function(){
+                                        $(this).parent().toggleClass("showContent");
+
+                                        var replaceText =$(this).parent().hasClass("showContent") ? "Lasīt mazāk" : "Lasīt vairāk";
+                                        $(this).text(replaceText);
+                                    }); 
+                                    const openModalButtons=document.querySelectorAll('[data-modal-target]');
+                                    const closeModalButtons=document.querySelectorAll('[data-close-button]');
+                                    const overlay = document.getElementById('overlay');
+                                    
+                                    openModalButtons.forEach(button => {
+                                        button.addEventListener('click', () => {
+                                            const modal = document.querySelector(button.dataset.modalTarget);
+                                            openModal(modal);
+                                        });
+                                    });
+                                    closeModalButtons.forEach(button => {
+                                        button.addEventListener('click', () => {
+                                            const modal = button.closest('.modal');
+                                            closeModal(modal);
+                                        });
+                                    })
+                                    function openModal(modal) {
+                                    if(modal==null) return
+                                    modal.classList.add('active');
+                                    overlay.classList.add('active');
+                                    }
+                                    function closeModal(modal) {
+                                    if(modal==null) return
+                                    modal.classList.remove('active');
+                                    overlay.classList.remove('active');
+                                    };
+                                    overlay.addEventListener('click', () => {
+                                        const modals=document.querySelectorAll('.modal.active');
+                                        modals.forEach (modal=> {
+                                            closeModal (modal);
+                                        });
+                                    });
+                                    
+                                </script>         
+                                    
+            
+            
+        </body>
+</html>

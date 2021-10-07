@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let mainigais;
+            let rezultats;
+            const konstantais=6;
+            mainigais=9 ; 
+            rezultats=mainigais+konstantais+"rezultata" ;
+            console.log(rezultats);
+        </script>
+    </head>
+    <body id="kermenis">
+       <p id="par1">
+           Paragrāfs
+
+       </p>
+       <script>
+           console.log(document.getElementById("par1").innerHTML); 
+           document.getElementById("par1").innerHTML="kaut kas cits"
+           document.getElementById("par1").innerHTML+=rezultats; 
+           
+           let jaunais = document.createElement("p"); 
+           jaunais.id ="par2";
+           jaunais.innerHTML="cits paragrāfs";
+        	document.body.appendChild(jaunais); 
+            for( let skaititajs=1;skaititajs<=999;skaititajs++){
+
+                jaunais = document.createElement("p");
+                jaunais.id ="par2";
+                jaunais.innerHTML="cits paragrāfs"+skaititajs;
+        	    document.body.appendChild(jaunais); 
+            }
+     </script>
+    </body>
+</html>

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css"/>
      <h1 style="text-align: center; font-size: 35pt; margin-top: 45px;">
-         Latvijas kultūrģeogrāfiskais mantojums
+         Latvian Cultural Heritage
      </h1>
      <div id="overlay"></div>
      <style>
@@ -31,7 +31,7 @@
                 width: 37%;
                 float: left;
                 margin: 20px 50px;
-                background-color: rgb(191, 219, 155);
+                background-color: rgb(184, 235, 255);
                 padding: 15px;
                 border-radius: 8px;
                 box-shadow: 0 5px 5px rgba(0,0,0,0,0.15);
@@ -57,10 +57,13 @@
                 height: 90px;
                 overflow: hidden;
             }
+            .box iframe{
+                display: none;
+            }
             .box a{
                 display: inline-block;
-                color: rgb(233, 20, 20);
-                background-color: rgb(169, 209, 241);
+                color: rgb(27, 26, 26);
+                background-color: rgb(255, 255, 255);
                 text-decoration: none;
                 padding: 10px 15px;
                 border-radius: 8px;
@@ -71,6 +74,9 @@
             }
             .box.showContent p{
                 height: auto;
+            }
+            .box.showContent iframe{
+                display: block;
             }
             .box.showContent a.readmore-btn{
                 background-color: red;
@@ -85,7 +91,7 @@
                 transition: 200ms ease-in-out;
                 transform: translate(-50%, -50%) scale(0);
                 z-index: 10;
-                background-color: rgb(253, 249, 243);
+                background-color: rgb(234, 245, 255);
                 width: 1000px;
                 max-width: 90%;
                 overflow: auto;
@@ -176,9 +182,9 @@
 
         </style>
             <div>
-                <button data-modal-target="#modal" style="border-radius: 10px; padding: 10px 15px; font-size: x-large; margin-top: 30px;margin-left: 5%;background-image: url(https://flagfactory.lv/wp-content/uploads/2020/02/Latvia_Flag.gif); border-image: 30px 30px; color: white; font-weight: bold; box-shadow: rgb(32, 32, 32);">LATVIJĀ</button>
+                <button data-modal-target="#modal" style="border-radius: 10px; padding: 10px 15px; font-size: x-large; margin-top: 30px;margin-left: 5%;background-image: url(https://flagfactory.lv/wp-content/uploads/2020/02/Latvia_Flag.gif); border-image: 30px 30px; color: white; font-weight: bold; box-shadow: rgb(32, 32, 32);">LATVIA</button>
             
-                <button data-modal-target="#modal1" style="border-radius: 10px; padding: 10px 15px; font-size: x-large; margin-top: 30px;margin-right: 5%; float:right; background-image: url(https://flagfactory.lv/wp-content/uploads/2020/02/Latvia_Flag.gif); border-image: 30px 30px; color: white; font-weight: bold; box-shadow: rgb(32, 32, 32);">RĪGĀ</button>
+                <button data-modal-target="#modal1" style="border-radius: 10px; padding: 10px 15px; font-size: x-large; margin-top: 30px;margin-right: 5%; float:right; background-image: url(https://flagfactory.lv/wp-content/uploads/2020/02/Latvia_Flag.gif); border-image: 30px 30px; color: white; font-weight: bold; box-shadow: rgb(32, 32, 32);">RIGA</button>
              
                         
             </div>
@@ -187,46 +193,51 @@
             
                 <div class="modal" id="modal">
                 <div class="modal-header">
-                <div class="title">Objekti Latvijā</div>
+                <div class="title">Top 3 sightseeing places in Latvia</div>
                 <button data-close-button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body"><div class="box">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Rundale_palace_-_Igors_Jefimovs_-_Panoramio.jpg" alt="" style="border-image-width: 400px; height: 200px;">
                     <h1>Rundales castle
                     </h1>
-                    <p>In 1735 Duke of Courland Ernst Johann von Biron bought land in Rundāle with an old medieval castle in the territory of a planned summer residence. 
-                    The old castle was demolished and construction after the design of Bartolomeo Rastrelli started in 1736. 
-                    Construction proceeded slowly because part of the materials and resources were transferred to the construction of Jelgava Palace, a project which was more important for the duke. 
-                    Following Biron's fall from grace in 1740, the palace stood unfinished and empty until 1762 when Biron returned from his exile. Under the supervision of Rastrelli its construction was finished in 1768. 
-                    Johann Michael Graff produced lavish stucco decorations for the palace during this time. Ernst Johann von Biron loved the palace and moved there almost immediately in 1768. He often visited the palace and spent summers there until his death in 1772</p>
-                    <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                    <p>The name of Rundāle comes from the German place-name Ruhenthal (Valley of Peace).
+                        The Rundāle Palace built during the 16th century was located on the northern side of the pond.
+                         Rundāle Manor was already created at the end of the 15th century. It belonged to the Grotthus family from 1505 to 1681 and the palace was mentioned in the list of Livonian castles in 1555.
+                         The old palace was completely torn down, and the stones, bricks and even the mortar were used in the construction of the new palace.During the time from 1915 to 1918 a German army commandant’s office and an infirmary was established in the palace. 
+                         In 1972 a permanent Rundāle Palace Museum was created and its main aim was to renew the whole ensemble of the palace by mainly orientating towards the condition of the palace during the second part of the 18th century. 
+                        
+                    </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115362.54208056015!2d24.068179909237767!3d56.426316724303355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e8ca20fee159d5%3A0x90f7507224882a!2sRund%C4%81le%20Palace%20Museum!5e0!3m2!1sen!2slv!4v1634207550758!5m2!1sen!2slv" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <a href="javascript:void(); " class="readmore-btn">Read more</a>
                     </div>
         
                     <div class="box">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Siguldas_jaun%C4%81_pils_-_panoramio_%281%29.jpg/1200px-Siguldas_jaun%C4%81_pils_-_panoramio_%281%29.jpg" alt="" style="border-image-width: 400px; height: 200px;">
                     <h1>Siguldas castle</h1>
-                    <p>The manor center began to develop in the fore-castle area of Sigulda Medieval Castle during the 17th century. 
-                        There are still a few remaining 18th and 19th century buildings built during the ownership of the Von Borghs and Kropotkins. 
-                        These are the Summer Castle, the New Castle, the White Castle, the vagar's (supervisor of serfs) house, the servants' house, a barn, a laundry house and a vegetable and fruit basement. 
-                        The manor center is enclosed by chipped boulder walls with a splendid gate structure. </p>
-                    <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                    <p>Sigulda Medieval Castle was built by the Livonian Brothers of the Sword who were later incorporated into the Teutonic Order of the castle, thus the castle eventually became the property of the Livonian Order.
+                        In 2011, the European Union co-sponsored a project designed to assist with the renovations. It was officially titled “Reconstruction of Sigulda Castle Ruins and Infrastructure Adjustment for Tourism Development” and successfully concluded in 2012.
+                        All of this has resulted in the reconstruction of the castle ruins and it’s surroundings which makes it a unique tourist attraction combining a rich cultural history in an ecologically clean environment.
+                    </p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2163.2916631983167!2d24.84760061618039!3d57.16626368095499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e94fd31d7ac7c5%3A0x461678a3b8d5a7ae!2sCastle%20Of%20The%20Livonian%20Order%20In%20Sigulda!5e0!3m2!1sen!2slv!4v1634209048652!5m2!1sen!2slv" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <a href="javascript:void(); " class="readmore-btn">Read more</a>
                     </div>
         
                         <div class="box">
                         <img src="https://www.celotajs.lv/g/Culture/Latvia/39049/BalticPictures--22.jpg?size=1024" alt="" style="border-image-width: 400px; height: 200px;">
                         <h1>Cesu castle</h1>
-                        <p>The castle was built for the bishop of Courland between 1264 and 1267.
-                            It was rebuilt in the 16th century and from 1561 until 1920 it was the property of the Baltic-German Baron von Behr and his descendants.
-                            During the 18th century the castle was expanded and from 1835 to 1841 it underwent a major reconstruction work to become one of the first samples of Neo-Gothic architecture in Kurzeme.
-                            The building was partly burned during the Russian Revolution of 1905.
-                            Between 1906 and 1907 a household yard and tower were built in one of its corners, being the façade remodelled with its Gothic forms preserved.</p>
-                        <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                        <p>During its 800 years of existence, Cēsis Castle’s role has changed as significantly as its external appearance. 
+                            The castle was built around 1214 and originally served as the residence of the Knights of the Livonian Brothers of the Sword, but under the management of its next owner – Teutonic Order – it gained fame as the most powerful fortress in Livonia. 
+                            After the Great Northern War, the castle was completely abandoned to its fate – rain and frost gradually undermined buildings that were left without roofs, and the town`s people contributed by removing stone blocks from the thick castle walls to build their own houses. 
+                            Only the Romantic movement in the 19th century aroused broader public interest in the castle as a historic monument, thus inaugurating the castle’s conservation and exploration history. 
+                            Today Cēsis Castle is one of the most special destinations of cultural tourism in Latvian, its uniqueness attracts travellers from all over the world.</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2154.6731931203653!2d25.268075716185386!3d57.3134383809994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ebe18f5f79d927%3A0x54847b6e0412fd99!2sC%C4%93sis%20Castle!5e0!3m2!1sen!2slv!4v1634209123151!5m2!1sen!2slv" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <a href="javascript:void(); " class="readmore-btn">Read more</a>
                         </div>
                 </div>
             </div>
                             <div class="modal" id="modal1">
                             <div class="modal-header">
-                            <div class="title">Objekti Rīgā</div>
+                            <div class="title">Top 3 sightseeing places in Riga</div>
                             <button data-close-button class="close-button">&times;</button>
                             </div>
                             <div class="modal-body"><div class="box">
@@ -236,7 +247,8 @@
                                 <p>Vecrīga is the original area of Riga and consists of the historic city limits before the city was greatly expanded in the late 19th century. 
                                     In the old days, Vecrīga was protected by a surrounding wall except the side adjacent to the Daugava river bank. 
                                     When the wall was torn down, the waters from Daugava filled the space creating (Riga City Canal).</p>
-                                <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8704.19775348086!2d24.096676699468627!3d56.947954244236584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd7054ee4c5%3A0xf38a7b5d7e78c30f!2sVecr%C4%ABga%2C%20Central%20District%2C%20Riga%2C%20LV-1050!5e0!3m2!1sen!2slv!4v1634209187870!5m2!1sen!2slv" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                <a href="javascript:void(); " class="readmore-btn">Read more</a>
                                 </div>
                     
                                 <div class="box">
@@ -246,7 +258,8 @@
                                     It houses more than 52,000 works of art reflecting the development of professional art in the Baltic area and in Latvia from the middle of the 18th century until the present time.
                                     The museum is located in building in Riga, which is historically significant. 
                                     The building at 1, Janis Rozentāls sq. was designed by the German architect Wilhelm Neumann and built in 1905 — it is one of the most impressive historical buildings on the boulevard and is situated next to the Academy of Art. </p>
-                                <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.5897951048664!2d24.110886616173204!3d56.95582898089218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfcfc8bb3df3%3A0xc447c1df0dcf5c67!2sLatvian%20National%20Museum%20of%20Art!5e0!3m2!1sen!2slv!4v1634209232190!5m2!1sen!2slv" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                <a href="javascript:void(); " class="readmore-btn">Read more</a>
                                 </div>
                     
                                     <div class="box">
@@ -257,7 +270,8 @@
                                         It has undergone many modifications in the course of its history.
                                         David Caspari was rector of the cathedral school in the late 17th century. 
                                         His son Georg Caspari also served at the cathedral.</p>
-                                    <a href="javascript:void(); " class="readmore-btn">Lasīt vairāk</a>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.987467888406!2d24.102570116172952!3d56.9490159808902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd742f9369b%3A0x56fa560a4b501fdb!2sRiga%20Cathedral!5e0!3m2!1sen!2slv!4v1634209283331!5m2!1sen!2slv" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    <a href="javascript:void(); " class="readmore-btn">Read more</a>
                                     </div>
                             </div>
                             </div>
@@ -268,7 +282,7 @@
                                         $(".readmore-btn").on("click", function(){
                                         $(this).parent().toggleClass("showContent");
 
-                                        var replaceText =$(this).parent().hasClass("showContent") ? "Lasīt mazāk" : "Lasīt vairāk";
+                                        var replaceText =$(this).parent().hasClass("showContent") ? "Read less" : "Read more";
                                         $(this).text(replaceText);
                                     }); 
                                     const openModalButtons=document.querySelectorAll('[data-modal-target]');
@@ -297,12 +311,12 @@
                                     modal.classList.remove('active');
                                     overlay.classList.remove('active');
                                     };
-                                    overlay.addEventListener('click', () => {
-                                        const modals=document.querySelectorAll('.modal.active');
-                                        modals.forEach (modal=> {
-                                            closeModal (modal);
-                                        });
-                                    });
+                                    // overlay.addEventListener('click', () => {
+                                    //     const modals=document.querySelectorAll('.modal.active');
+                                    //     modals.forEach (modal=> {
+                                    //         closeModal (modal);
+                                    //     });
+                                    // });
                                     
                                 </script>         
                                     
